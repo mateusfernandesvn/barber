@@ -1,10 +1,8 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Header } from "./components/header";
-import { Footer } from "./components/footer";
+import { Metadata } from "next";
+import { Container } from "@/app/components/container";
 
 export const metadata: Metadata = {
-  title: "A Navalha",
+  title: "Agendamento - A Navalha",
   description: "Barbearia A Navalha em Salvador-Ba",
   authors: {
     name: "Mateus Fernandes",
@@ -39,19 +37,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function Agendamento() {
   return (
-    <html lang="pt-br">
-      <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <Container>
+      <h1 className="text-center">Página Agendamento</h1>
+    </Container>
   );
 }

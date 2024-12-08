@@ -1,101 +1,103 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import { Container } from "./components/container";
+import { Section } from "./components/section";
+import { TableValues } from "./components/tableValues";
+import { Gallery } from "./components/gallery";
+
+import { FaLocationDot } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa6";
+import { FaClock } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <main className="bg-white text-black dark:bg-zinc-900 dark:text-gray-200">
+      <div className="relative w-full ">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/banner.png"
+          alt="Banner"
+          width={1920}
+          height={1080}
+          quality={100}
+          priority={true}
+          className="brightness-50 object-cover  max-lg:h-96"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="absolute w-full inset-0 flex flex-col items-center justify-center text-center bg-opacity-50">
+          <h1 className="text-5xl font-semibold uppercase text-white mb-4 tracking-wider font-heading select-none max-sm:text-3xl ">
+            Agende seu estilo <br /> hoje mesmo!
+          </h1>
+          <p className="font-semibold uppercase text-gray-100 mb-5 select-none max-lg:text-xs ">
+            Cortes que refletem sua personalidade e elegância.
+          </p>
+          <Link
+            href="/agendamento"
+            className="w-full max-w-[12rem] text-sm md:max-w-[15rem] py-2 bg-red-600 text-white font-bold rounded-lg md:py-3 md:text-lg uppercase hover:bg-red-700 duration-300 mx-auto"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Agende agora
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+
+      <Container>
+        <Section title="Seu Estilo, Nossa Missãos" id="about">
+          <div className="flex flex-col justify-center mx-8 text-lg max-sm:mx-1 ">
+            <p className="text-center max-sm:text-justify">
+              Na Master Barber, acreditamos que um corte de cabelo vai além de
+              um simples serviço: é uma experiência de cuidado e estilo. Desde a
+              nossa inauguração, nos dedicamos a oferecer o que há de melhor no
+              universo da barbearia, combinando tradição e tendências modernas
+              para criar um visual único e personalizado para cada cliente. Com
+              uma equipe de profissionais altamente qualificados, garantimos um
+              atendimento de excelência, em um ambiente acolhedor e
+              descontraído. Nossa missão é não apenas realçar a aparência, mas
+              também proporcionar um momento de relaxamento e bem-estar, sempre
+              com um toque de sofisticação.
+            </p>
+          </div>
+          <div className="flex flex-col md:flex-row w-full items-center bg-gray-200 m-auto border border-gray-300 rounded-lg p-12 justify-around gap-8 my-8 dark:bg-zinc-950 dark:text-white">
+            <div className="flex flex-col items-center gap-4 text-base justify-center">
+              <FaLocationDot size={40} color="gray" />
+              <p className="font-semibold text-2xl uppercase text-gray-400 underline underline-offset-8 decoration-red-500">
+                Local
+              </p>
+              <p className="font-semibold text-center">
+                Av. Dorival Caymmi, Itapuã
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center gap-4 text-sm justify-center">
+              <FaPhone size={40} color="gray" />
+              <p className="font-semibold text-2xl uppercase text-gray-400 underline underline-offset-8 decoration-red-500">
+                Telefone
+              </p>
+              <p className="font-semibold text-center">(71) 99999-9999</p>
+            </div>
+
+            <div className="flex flex-col items-center gap-4  justify-center">
+              <FaClock size={40} color="gray" />
+              <p className="font-semibold text-2xl  uppercase text-gray-400 underline underline-offset-8 decoration-red-500">
+                Horário
+              </p>
+              <span className=" text-center">
+                Seg a Sáb: 8h às 19h
+              </span>
+            </div>
+          </div>
+        </Section>
+
+        <Section title="Serviços" id="services">
+          <h1>teste</h1>
+        </Section>
+
+        <Section title="Tabela de valores" id="prices">
+          <TableValues />
+        </Section>
+
+        <Section title=" Nossa Galeria" id="gallery">
+          <Gallery />
+        </Section>
+      </Container>
+    </main>
   );
 }
