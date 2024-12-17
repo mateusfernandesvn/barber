@@ -5,10 +5,13 @@ import { Container } from "./components/container";
 import { Section } from "./components/section";
 import { TableValues } from "./components/tableValues";
 import { Gallery } from "./components/gallery";
+import { Card } from "./components/card";
 
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
 import { FaClock } from "react-icons/fa6";
+import { PiHairDryer, PiScissors  } from "react-icons/pi";
+import { GiBeard } from "react-icons/gi";
 
 export default function Home() {
   return (
@@ -79,15 +82,18 @@ export default function Home() {
               <p className="font-semibold text-2xl  uppercase text-gray-400 underline underline-offset-8 decoration-red-500">
                 Horário
               </p>
-              <span className=" text-center">
-                Seg a Sáb: 8h às 19h
-              </span>
+              <span className=" text-center">Seg a Sáb: 8h às 19h</span>
             </div>
           </div>
         </Section>
 
-        <Section title="Serviços" id="services">
-          <h1>teste</h1>
+        <Section title="Principais Serviços" id="services">
+         
+          <div className="grid grid-cols-3 max-md:grid-cols-1 ">
+            <Card icon={<PiScissors size={40}  />} title="Cortes" />
+            <Card icon={<GiBeard size={40}  />} icon2={<PiScissors size={40}  />}  title="Combo" />
+            <Card icon={<GiBeard size={40}  />} title="Barba" />
+          </div>
         </Section>
 
         <Section title="Tabela de valores" id="prices">

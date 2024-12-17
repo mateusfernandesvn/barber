@@ -9,7 +9,7 @@ export function Footer() {
       <div className="my-4">
       <Link
           href="/"
-          className="text-red-600 uppercase font-semibold text-4xl lg: mb-4 lg:mb-0"
+          className="text-red-600 uppercase font-extrabold text-3xl lg: mb-4 lg:mb-0 italic"
         >
          A <span className="text-white">Navalha</span> 
         </Link>
@@ -24,19 +24,21 @@ export function Footer() {
        
 
         <div className="flex mt-8 mb-6  justify-center gap-4 ">
-          <a href="">
+          <a href="mailto:contato@barbearia.com" title="Email">
             <MdEmail size={30} />
           </a>
 
           <a
             href="#"
             target="_blank"
+            title="Instagram"
           >
             <FaInstagram size={30} />
           </a>
           <a
             href="#"
             target="_blank"
+            title="Facebook"
           >
             <FaFacebook size={30} />
           </a>
