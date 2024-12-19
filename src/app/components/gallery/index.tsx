@@ -36,14 +36,14 @@ export  function Gallery() {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-96 mt-4 group overflow-hidden">
+            <div className="relative w-full h-96 my-4 group overflow-hidden max-md:h-64">
               <Image
                 src={image.src}
                 alt={image.alt}
                 width={600}
                 height={1080}
                 quality={100}
-                className="brightness-75 object-cover rounded-md group-hover:scale-110 transition-transform duration-300 hover:brightness-100"
+                className="brightness-75 w-full h-96 object-cover rounded-md group-hover:scale-110 transition-transform duration-300 hover:brightness-100 max-md:h-64"
               />
             </div>
           </SwiperSlide>

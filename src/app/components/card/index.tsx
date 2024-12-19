@@ -6,12 +6,12 @@ interface CardProps {
   
   export const Card: React.FC<CardProps> = ({ icon, icon2, title }) => {
     return (
-      <div className="w-40 h-40 rounded-full text-center flex flex-col items-center justify-center mx-auto bg-white shadow-lg my-12 hover:scale-105 transition-all duration-300">
+      <div className="w-44 h-44  rounded-full text-center flex flex-col items-center justify-center mx-auto bg-white my-12 hover:scale-105 transition-all duration-300 shadow-lg">
         <div className="flex gap-2 items-center">
           <div className="text-black text-2xl">{icon}</div>
           {icon2 && (
             <>
-              <span className="text-black text-3xl">+</span>
+              <span className="text-black text-3xl font-bold">+</span>
               <div className="text-black text-2xl">{icon2}</div>
             </>
           )}
