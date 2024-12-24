@@ -22,14 +22,11 @@ export  function Gallery() {
         keyboard={{ enabled: true }}
         navigation
         breakpoints={{
-          320: {
-            slidesPerView: 1, // Exibe 1 imagem por vez
-          },
           768: {
-            slidesPerView: 1, // Exibe 1 imagem por vez
+            slidesPerView: 1, 
           },
           1024: {
-            slidesPerView: 2, // Exibe 2 imagens por vez
+            slidesPerView: 2, 
           },
         }}
         className="mySwiper"
