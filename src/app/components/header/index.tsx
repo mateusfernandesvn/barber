@@ -10,7 +10,7 @@ export function Header() {
 
   return (
     <header className="bg-zinc-950 text-white w-full items-center mx-auto">
-      <nav className="w-full h-24 flex mx-auto items-center lg:flex-row justify-between px-12 py-3  ">
+      <nav className="w-full h-20 flex mx-auto items-center lg:flex-row justify-between px-12 py-3  ">
         <Link
           href="/"
           className="text-red-600 uppercase font-extrabold text-3xl italic"

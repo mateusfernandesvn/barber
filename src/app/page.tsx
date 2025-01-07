@@ -16,7 +16,7 @@ import { MdSpa } from "react-icons/md";
 
 export default function Home() {
   return (
-    <main className="bg-white text-black dark:bg-zinc-900 dark:text-gray-200">
+    <main className="bg-zinc-900 text-gray-200">
 
       <div className="relative w-full">
         <Image
